@@ -123,6 +123,7 @@ If you wish to modify the default workflow settings to suit your preferences, pl
     ![Update days to sync settings](./images/13_4.png)
 
 5. Also you can configure event prefixes for each caledar, you need to update **Setting: Prefix for events in Organization 1** and **Setting: Prefix for events in Organization 2**.
+**Note: event prefix can't be empty or white space string.**
 
     ![Update prefix for calendar events](./images/13_5.png)
 
