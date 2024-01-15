@@ -8,7 +8,7 @@ We utilize Microsoft Power Automate to streamline this process. Power Automate i
 
 ---
 
-**This tutorial based on [MShekow](https://github.com/MShekow/outlook-calendar-sync) solution on Microsoft Power Automate Platform for syncing Outlook calendars.**
+**This tutorial is based on [MShekow](https://github.com/MShekow/outlook-calendar-sync) solution on Microsoft Power Automate Platform for syncing Outlook calendars.**
 
 ---
 
@@ -22,13 +22,13 @@ Our solution represents an enhanced iteration of the existing system, offering u
 
 ## The steps to create your own Microsoft Power Automate flow to sync Outlook calendars
 
-1. Download the .zip file containing the Microsoft Power Automate flow from the repository [here](https://github.com/AnyCase-Company-LTD/Outlook-Calendars-Sync/raw/main/Calendars%20Sync%20Workflow.zip) to your local machine.
+1. Download the `.zip` file containing the Microsoft Power Automate flow from the repository [here](https://github.com/AnyCase-CodeQuest/Outlook-Calendars-Sync/releases/download/v1.0/Calendars-Sync-Workflow-v1_0.zip) to your local machine.
 
-2. Follow the [link](https://make.powerautomate.com/) to login to Microsoft Power Automate Platform (**note:** login to organization account with license (e.g. Microsoft Office 365) that allows you to use Microsoft Power Automate Platform).
+2. Follow the [link](https://make.powerautomate.com/) to login to Microsoft Power Automate Platform (**note:** login to the organization account with the license (e.g. Microsoft Office 365) that allows you to use Microsoft Power Automate Platform).
 
 3. On the screen, you should see the **Connections** link in the left sidebar. If you don't see it, you can click the **More** link and find the **Connections** link there.
 
-    ![Move to Connections tab](./images/3.png)
+    ![Move to the Connections tab](./images/3.png)
 
 4. At the **Connections** tab you need to create two connections to your Microsoft Outlook account (e.g. add your organization account and your client account):
 
@@ -56,11 +56,11 @@ Our solution represents an enhanced iteration of the existing system, offering u
 
     ![Import flow](./images/6.png)
 
-7. You will see the tab with file input, press **Upload** button and select .zip file from **Step 1**. It will take a while to upload file to platform.
+7. You will see the tab with file input, press **Upload** button and select `.zip` file from **Step 1**. It will take a while to upload the file to the platform.
 
     ![Upload the file](./images/7.png)
 
-8. At this step you need to use your created connections from **Step 4**. You need to click link **Select during import** and choose your created connections:
+8. At this step you need to use your created connections from **Step 4**. You need to click the link **Select during import** and choose your created connections:
 
     - Click the link **Select during import**
 
@@ -70,7 +70,7 @@ Our solution represents an enhanced iteration of the existing system, offering u
 
         ![Select connections](./images/8_2.png)
 
-9. After selecting your connections press button **Import**.
+9. After selecting your connections press the button **Import**.
 
     ![Submit import](./images/9.png)
 
@@ -112,7 +112,7 @@ If you wish to modify the default workflow settings to suit your preferences, pl
 
 3. If you don't need the dynamic setup of days to sync (first execution syncs for 30 days, other executions sync for 7), and you want to sync the same days consistently, update **Setting: Need dynamic days to sync** (set it to "true" if dynamic logic is needed, set it to "false" if dynamic logic is not needed).
 
-    ![Update dynamic sync setting](./images/13_3_1.png)
+    ![Update the dynamic sync setting](./images/13_3_1.png)
 
     Also, update **Setting: Days to sync** with your desired value.
 
@@ -122,14 +122,14 @@ If you wish to modify the default workflow settings to suit your preferences, pl
 
     ![Update days to sync settings](./images/13_4.png)
 
-5. Also you can configure event prefixes for each caledar, you need to update **Setting: Prefix for events in Organization 1** and **Setting: Prefix for events in Organization 2**.
+5. Also you can configure event prefixes for each calendar, you need to update **Setting: Prefix for events in Organization 1** and **Setting: Prefix for events in Organization 2**.
 **Note: event prefix can't be empty or white space string.**
 
     ![Update prefix for calendar events](./images/13_5.png)
 
     **Note:** how it works:
-    - You have **Calendar 1** with prefix **[Organization 1]:** and **Calendar 2** with prefix **[Organization 2]:**
+    - You have **Calendar 1** with the prefix **[Organization 1]:** and **Calendar 2** with the prefix **[Organization 2]:**
     - You have **Event 1** in **Calendar 1** and **Event 2** in **Calendar 2**
-    - During calendars sync invokation it will create in **Calendar 1** event with name **[Organization 2]: Event 2** and it will create in **Calendar 2** event with name **[Organization 1]: Event 1**
+    - During calendars sync invocation it will create in **Calendar 1** event with the name **[Organization 2]: Event 2** and it will create in **Calendar 2** event with the name **[Organization 1]: Event 1**
 
-**Note:** If you don't need the calendars sync any more, you can press the button **Turn off** (you can find it using **Step 11** and **Step 12**, it will be at the same place as **Turn on** button).
+**Note:** If you don't need the calendars sync you can press the button **Turn off** (you can find it using **Step 11** and **Step 12**, it will be at the same place as **Turn on** button).
